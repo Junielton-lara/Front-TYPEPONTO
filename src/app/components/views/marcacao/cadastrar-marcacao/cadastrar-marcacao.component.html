@@ -1,0 +1,34 @@
+<a routerLink="/funcionario/listar">Home</a>
+<br>
+<br>
+<div id="funcionarioId">
+    <label for="funcionarioId">Funcionario Id:</label><br>
+    <input type="number" name="funcionarioId" [(ngModel)]="funcionarioId">
+</div>
+<br>
+<div id="dataMarcacao">
+    <label for="dataMarcacao">Data Marcacao:</label><br>
+    <input type="date" name="dataMarcacao" [(ngModel)]="dataMarcacao">
+</div>
+<br>
+<div id="horaEntrada">
+    <label for="horaEntrada">Hora Entrada:</label><br>
+    <input type="time" name="horaEntrada" [(ngModel)]="horaEntrada">
+</div>
+<br>
+<div id="genero">
+    <label for="horaSaidaAlmoco">Hora Saida Almoco:</label><br>
+    <input type="time" name="horaSaidaAlmoco" [(ngModel)]="horaSaidaAlmoco">
+</div>
+<br>
+<div id="horaVoltaAlmoco">
+    <label for="horaVoltaAlmoco">Hora Volta Almoco:</label><br>
+    <input type="time" name="horaVoltaAlmoco" [(ngModel)]="horaVoltaAlmoco">
+</div>
+<br>
+<div id="saida">
+    <label for="horaVoltaAlmoco">Saida:</label><br>
+    <input type="time" name="saida" [(ngModel)]="saida">
+</div>
+<br>
+<button (click)="cadastrar()">Cadastrar</button>

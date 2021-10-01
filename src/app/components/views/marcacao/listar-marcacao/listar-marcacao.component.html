@@ -1,0 +1,42 @@
+<a routerLink="/funcionario/listar">Inicio</a>
+<br>
+<br>
+
+<div class="marca" *ngFor="let marcacao of marcacoes">
+    <div class="card-marca">
+        <span class="info-marca">ID Marcação: {{ marcacao.id}}</span>
+        <span class="info-marca">Data Marcação: {{ marcacao.dataMarcacao}}</span>
+
+        <div class="card-conteudo">
+            <span class="card-descri">ID funcionario:{{ marcacao.funcionarioId }}</span><br>
+            <span class="card-descri">Nome:{{ marcacao.funcionario.nome }}</span><br>
+            <span class="card-descri">Pis:{{ marcacao.funcionario.pis }}</span>
+
+        </div>
+        <div class="horas">
+            <div>
+                <span>Hora Entrada: </span>
+                <span>{{ marcacao.horaEntrada }}</span>
+            </div>
+            <div>
+                <span>Hora Saida Almoco: </span>
+                <span>{{ marcacao.horaSaidaAlmoco }}</span>
+            </div>
+            <div>
+                <span>Hora Volta Almoco: </span>
+                <span>{{ marcacao.horaVoltaAlmoco }}</span>
+            </div>
+            <div>
+                <span>Hora Saida : </span>
+                <span>{{ marcacao.saida }}</span>
+            </div>
+            <div>
+                <br><span>Hora totais trabalhadas no dia : </span>
+                <span>{{ marcacao.horasT }}</span>
+            </div>
+        </div>
+        <div class="editEdel">
+            <span><a routerLink="/marcacao/editar"><button>Editar</button></a></span>
+            <span><button (click)="delete(marcacao.id)">Apagar</button></span>
+        </div>
+    </div>

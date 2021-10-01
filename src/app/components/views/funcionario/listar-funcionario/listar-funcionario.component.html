@@ -1,0 +1,28 @@
+<a routerLink="/funcionario/cadastrar">Cadastrar funcionario |</a>
+<a routerLink="/marcacao/cadastrar">Cadastrar Marcacao |</a>
+<a routerLink="/marcacao/listar">Listar Marcacao</a>
+
+<br>
+<br>
+<table border="5">
+    <tr>
+        <td>ID</td>
+        <td>Nome</td>
+        <td>Pis</td>
+        <td>Valor Hora</td>
+        <td>Data de admição</td>
+        <td>Editar</td>
+        <td>Remover</td>
+
+    </tr>
+    <tr *ngFor="let funcionario of funcionarios">
+        <td>{{ funcionario.id }}</td>
+        <td>{{ funcionario.nome }}</td>
+        <td>{{ funcionario.pis }}</td>
+        <td>{{ funcionario.valorHora }}</td>
+        <td>{{ funcionario.dataAdm }} </td>
+        <td><a routerLink="/funcionario/editar"><button>E</button></a></td>
+        <td><button (click)="delete(funcionario.pis)">X</button></td>
+
+    </tr>
+</table>

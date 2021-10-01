@@ -1,0 +1,21 @@
+<a routerLink="/funcionario/listar">Listar funcionario</a>
+<br>
+<br>
+<div id="id">
+    <label for="nome">Id:</label><br>
+    <input type="text" name="id" [(ngModel)]="id">
+</div>
+<div id="nome">
+    <label for="nome">Nome:</label><br>
+    <input type="text" name="Nome" [(ngModel)]="nome">
+</div>
+<div id="genero">
+    <label for="pis">Pis:</label><br>
+    <input type="text" name="pis" [(ngModel)]="pis">
+</div>
+<div id="ano">
+    <label for="valorHora">Valor Hora:</label><br>
+    <input type="number" name="valorHora" step="0.1" placeholder="R$" [(ngModel)]="valorHora">
+</div>
+<br>
+<button (click)="update()">Atualizar</button>
