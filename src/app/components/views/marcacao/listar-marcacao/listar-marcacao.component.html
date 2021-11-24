@@ -1,19 +1,11 @@
-<a routerLink="/funcionario/listar">Inicio</a>
-<br>
-<br>
-
-<div class="marca" *ngFor="let marcacao of marcacoes">
-    <div class="card-marca">
-        <span class="info-marca">ID Marcação: {{ marcacao.id}}</span>
-        <span class="info-marca">Data Marcação: {{ marcacao.dataMarcacao}}</span>
-
-        <div class="card-conteudo">
-            <span class="card-descri">ID funcionario:{{ marcacao.funcionarioId }}</span><br>
-            <span class="card-descri">Nome:{{ marcacao.funcionario.nome }}</span><br>
-            <span class="card-descri">Pis:{{ marcacao.funcionario.pis }}</span>
-
-        </div>
-        <div class="horas">
+<div class="usu">
+    <mat-card *ngFor="let marcacao of marcacoes">
+        <mat-card-header>
+            <mat-card-title>Nome: {{ marcacao.funcionario.nome }}</mat-card-title>
+            <mat-card-subtitle>ID Marcação: {{ marcacao.id}} | Data Marcação: {{ marcacao.dataMarcacao}}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
             <div>
                 <span>Hora Entrada: </span>
                 <span>{{ marcacao.horaEntrada }}</span>
@@ -34,9 +26,11 @@
                 <br><span>Hora totais trabalhadas no dia : </span>
                 <span>{{ marcacao.horasT }}</span>
             </div>
-        </div>
-        <div class="editEdel">
-            <span><a routerLink="/marcacao/editar"><button>Editar</button></a></span>
-            <span><button (click)="delete(marcacao.id)">Apagar</button></span>
-        </div>
-    </div>
+            <div>
+                <button mat-fab color="warn" (click)="delete(marcacao.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

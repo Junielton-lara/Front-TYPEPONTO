@@ -10,6 +10,10 @@ import { FuncionarioService } from 'src/app/services/funcionario.service';
 })
 export class ListarFuncionarioComponent implements OnInit {
 
+    fonteDados: Funcionario[] = [];
+    exibirColunas: String[] = ["id", "nome","pis","valorHora","dataAdm"]
+
+
     constructor(private router: Router, private service: FuncionarioService){}
 
     public funcionarios: Funcionario[] = [];
@@ -17,7 +21,7 @@ export class ListarFuncionarioComponent implements OnInit {
     ngOnInit(): void
     {
         this.service.list().subscribe(funcionarios => {
-            this.funcionarios = funcionarios;
+            this.fonteDados = funcionarios;
             console.log(funcionarios);
 
 

@@ -1,0 +1,11 @@
+.content {
+  padding: 15px;
+}
+
+.container {
+  height: calc(100% - 110px);
+}
+
+.lado {
+  padding: 20px;
+}

@@ -1,0 +1,19 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="lado" opened mode="side">
+        <h1>Opções</h1>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/">Home</a>
+            <a mat-list-item routerLink="/funcionario/cadastrar">Cadastrar funcionario</a>
+            <a mat-list-item routerLink="/funcionario/listar">Listar funcionario</a>
+            <a mat-list-item routerLink="/funcionario/editar">Editar Funcionario</a>
+            <a mat-list-item routerLink="/marcacao/cadastrar">Cadastrar Marcação</a>
+            <a mat-list-item routerLink="/marcacao/listar">Listar Marcação</a>
+            <a mat-list-item routerLink="/marcacao/editar">Editar Marcação</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
