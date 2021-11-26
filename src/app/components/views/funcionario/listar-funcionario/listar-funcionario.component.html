@@ -1,28 +1,4 @@
-<!-- <table border="5">
-    <tr>
-        <td>ID</td>
-        <td>Nome</td>
-        <td>Pis</td>
-        <td>Valor Hora</td>
-        <td>Data de admição</td>
-        <td>Editar</td>
-        <td>Remover</td>
-
-    </tr>
-    <tr *ngFor="let funcionario of funcionarios">
-        <td>{{ funcionario.id }}</td>
-        <td>{{ funcionario.nome }}</td>
-        <td>{{ funcionario.pis }}</td>
-        <td>{{ funcionario.valorHora }}</td>
-        <td>{{ funcionario.dataAdm }} </td>
-        <td></td>
-        <td></td>
-
-    </tr>
-</table>
-<br> -->
-
-<table mat-table [dataSource]="fonteDados" class="mat-elevation-z8">
+<table mat-table [dataSource]="fonteDados" class="mat-elevation-z8 demo-table">
 
     <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>#</th>
@@ -38,15 +14,11 @@
     </ng-container>
     <ng-container matColumnDef="valorHora">
         <th mat-header-cell *matHeaderCellDef>Valor Hora</th>
-        <td mat-cell *matCellDef="let funcionario">{{funcionario.valorHora}}</td>
+        <td mat-cell *matCellDef="let funcionario">R$ {{funcionario.valorHora}}</td>
     </ng-container>
     <ng-container matColumnDef="dataAdm">
         <th mat-header-cell *matHeaderCellDef>Data de admição</th>
         <td mat-cell *matCellDef="let funcionario">{{funcionario.dataAdm}}</td>
-    </ng-container>
-    <ng-container>
-        <th>Excluir</th>
-        <td mat-cell *matCellDef="let funcionario"><button (click)="delete(funcionario.pis)">X</button></td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="exibirColunas"></tr>

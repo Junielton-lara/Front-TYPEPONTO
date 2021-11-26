@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>Deletar Funcionario</mat-card-title>
+    <mat-card-content>
+        <div>
+            <mat-form-field>
+                <mat-label>informe o Pis:</mat-label>
+                <mat-select [(ngModel)]="pis">
+                    <mat-option *ngFor="let funcionario of funcionarios" [value]="funcionario.pis">
+                        {{funcionario.pis}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button color="primary" (click)="delete(pis)">Deletar</button>
+        </div>
+    </mat-card-content>
+</mat-card>

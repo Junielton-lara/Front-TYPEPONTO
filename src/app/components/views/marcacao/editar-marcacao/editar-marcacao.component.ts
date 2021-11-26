@@ -11,7 +11,9 @@ import { MarcacaoService } from 'src/app/services/marcacao.service';
 })
 export class EditarMarcacaoComponent implements OnInit {
 
-    constructor(private router: Router, private serivce: MarcacaoService) { }
+  public marcacoes: Marcacao[] = [];
+
+    constructor(private router: Router, private service: MarcacaoService) { }
 
     id!: number;
     funcionarioId!: Number
@@ -23,6 +25,14 @@ export class EditarMarcacaoComponent implements OnInit {
     funcionario!: Funcionario;
 
     ngOnInit(): void {
+      
+    
+    this.service.list().subscribe(marcacoes => {
+      this.marcacoes = marcacoes;
+      console.log(marcacoes);
+  });
+
+  
     }
 
     update(): void{
@@ -37,7 +47,7 @@ export class EditarMarcacaoComponent implements OnInit {
           horaVoltaAlmoco: this.horaVoltaAlmoco,
           saida: this.saida,
       }
-      this.serivce.update(marcacao).subscribe(marcacao =>{
+      this.service.update(marcacao).subscribe(marcacao =>{
           console.log(marcacao)
           this.router.navigate(["marcacao/listar"]);
       });

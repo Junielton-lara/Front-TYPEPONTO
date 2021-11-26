@@ -2,9 +2,13 @@
     <mat-card-title>Editar Funcionario</mat-card-title>
     <mat-card-content>
         <div>
-            <mat-form-field>
-                <mat-label>ID:</mat-label>
-                <input matInput type="text" name="id" [(ngModel)]="id" placeholder="ID">
+            <mat-form-field appearance="fill">
+                <mat-label>Selecione o ID do funcionario</mat-label>
+                <mat-select [(ngModel)]="id">
+                    <mat-option *ngFor="let funcionario of funcionarios" [value]="funcionario.id">
+                        {{funcionario.id}}
+                    </mat-option>
+                </mat-select>
             </mat-form-field>
         </div>
         <div>
@@ -30,6 +34,7 @@
         <div>
             <button mat-raised-button color="primary" (click)="update()">Atualizar</button>
         </div>
+
     </mat-card-content>
 
 </mat-card>

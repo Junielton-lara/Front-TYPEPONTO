@@ -1,3 +1,5 @@
+import { DeletarFuncionarioComponent } from './components/views/funcionario/deletar-funcionario/deletar-funcionario.component';
+import { HomeComponent } from './components/template/home/home.component';
 import { EditarMarcacaoComponent } from './components/views/marcacao/editar-marcacao/editar-marcacao.component';
 import { EditarFuncionarioComponent } from './components/views/funcionario/editar-funcionario/editar-funcionario.component';
 import { CadastrarMarcacaoComponent } from './components/views/marcacao/cadastrar-marcacao/cadastrar-marcacao.component';
@@ -11,7 +13,7 @@ const routes: Routes = [
 
     {
         path: '',
-        component: ListarFuncionarioComponent
+        component: HomeComponent
     },
     {
         path: 'funcionario/listar',
@@ -26,6 +28,10 @@ const routes: Routes = [
         component: EditarFuncionarioComponent
     },
     {
+        path: 'funcionario/deletar',
+        component: DeletarFuncionarioComponent
+    },
+    {
         path: 'marcacao/listar',
         component: ListarMarcacaoComponent
     },
@@ -36,7 +42,7 @@ const routes: Routes = [
     {
         path: 'marcacao/editar',
         component: EditarMarcacaoComponent
-    }
+    },
 
 
 

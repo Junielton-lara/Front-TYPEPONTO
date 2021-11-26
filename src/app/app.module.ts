@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,8 @@ import { ContentComponent } from './components/template/content/content.componen
 import { HeaderComponent } from './components/template/header/header.component';
 import { SidenavComponent } from './components/template/sidenav/sidenav.component';
 import { FooterComponent } from './components/template/footer/footer.component';
+import { HomeComponent } from './components/template/home/home.component';
+import { DeletarFuncionarioComponent } from './components/views/funcionario/deletar-funcionario/deletar-funcionario.component';
 
 
 
@@ -44,6 +47,8 @@ import { FooterComponent } from './components/template/footer/footer.component';
     HeaderComponent,
     SidenavComponent,
     FooterComponent,
+    HomeComponent,
+    DeletarFuncionarioComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +64,8 @@ import { FooterComponent } from './components/template/footer/footer.component';
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

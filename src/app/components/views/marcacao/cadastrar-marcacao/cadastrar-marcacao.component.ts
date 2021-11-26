@@ -11,7 +11,9 @@ import { MarcacaoService } from 'src/app/services/marcacao.service';
 })
 export class CadastrarMarcacaoComponent implements OnInit {
 
-  constructor(private router: Router, private serivce: MarcacaoService) { }
+  
+
+  constructor(private router: Router, private service: MarcacaoService) { }
 
   funcionarioId!: Number
   dataMarcacao!: string;
@@ -21,8 +23,8 @@ export class CadastrarMarcacaoComponent implements OnInit {
   saida!: string;
   funcionario!: Funcionario;
 
-  ngOnInit(): void {
-  }
+
+  ngOnInit(): void {}
 
   cadastrar(): void{
 
@@ -36,7 +38,7 @@ export class CadastrarMarcacaoComponent implements OnInit {
         horaVoltaAlmoco: this.horaVoltaAlmoco,
         saida: this.saida,
     }
-    this.serivce.create(marcacao).subscribe(marcacao =>{
+    this.service.create(marcacao).subscribe(marcacao =>{
         console.log(marcacao)
         this.router.navigate(["marcacao/listar"]);
     });

@@ -25,7 +25,7 @@ export class ListarMarcacaoComponent implements OnInit {
   delete(id: any)
     {
         this.service.delete(id).subscribe((id) => {});
-        this.router.navigate(["marcacao/listar"]);
+        this.router.navigate([""]);
     }
 
 }

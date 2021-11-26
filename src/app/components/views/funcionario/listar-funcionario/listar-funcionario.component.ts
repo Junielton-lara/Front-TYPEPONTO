@@ -29,10 +29,5 @@ export class ListarFuncionarioComponent implements OnInit {
 
     }
 
-    delete(pis: string)
-    {
-        this.service.delete(pis).subscribe((pis) => {});
-        this.router.navigate(["funcionario/listar"]);
-    }
 
 }
